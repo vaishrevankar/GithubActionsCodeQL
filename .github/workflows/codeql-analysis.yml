@@ -91,7 +91,12 @@ jobs:
     # Optional plain body:
         body: Build job of ${{github.repository}} completed successfully!
     # Optional HTML body read from file:
-        html_body: file://README.md
+        #html_body: file://README.md
+        html_body: |
+          <p>Executed by: ${{ github.actor}}</p>
+          <p>Job name: ${{ github.job }}</p>
+          <p>Repository: ${{ github.repository }}</p>
+          <p>Status:${{ job.status }}</p>
     # Optional carbon copy recipients:
         #cc: kyloren@example.com,leia@example.com
     # Optional blind carbon copy recipients:
