@@ -96,4 +96,4 @@ jobs:
         html_body: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
         #ignore_cert: true
         convert_markdown: true
-        attachments: '[{"path":"codeql/csharp.sarif"}]'        
+        attachments: codeql/csharp.sarif       
