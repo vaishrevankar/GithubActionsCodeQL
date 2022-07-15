@@ -80,51 +80,21 @@ jobs:
         name: assets-for-download
         path: codeql/csharp.sarif
         
-    - name: Send mail
-      uses: dawidd6/action-send-mail@v3
+    - name: Send email
+      uses: devellany/send-mailer@v1.0.2
       with:
-    # Required mail server address:
-        server_address: smtp.gmail.com
-    # Required mail server port:
-        server_port: 465
-    # Optional (recommended): mail server username:
+        host: smtp.gmail.com
+      # Optional port (defaults to 465)
+        port: 465
         username: ${{secrets.MAIL_USERNAME}}
-    # Optional (recommended) mail server password:
         password: ${{secrets.MAIL_PASSWORD}}
-    # Required mail subject:
-        subject: Github Actions job result
-    # Required recipients' addresses:
+        sender: vaish revankar
+        from: vaish revankar
         to: vaishnavirevankar@gmail.com
-    # Required sender full name (address can be skipped):
-        from: vaish revankar # <user@example.com>
-    # Optional whether this connection use TLS (default is true if server_port is 465)
-        secure: true
-    # Optional plain body:
-        body: Build job of ${{github.repository}} completed successfully!
-        attachments: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
-    # Optional HTML body read from file:
-        html_body: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
-        #html_body: |
-          #<p>Executed by: ${{ github.actor}}</p>
-          #<p>Job name: ${{ github.job }}</p>
-          #<p>Repository: ${{ github.repository }}</p>
-          #<p>Status:${{ job.status }}</p>
-    # Optional carbon copy recipients:
-        #cc: kyloren@example.com,leia@example.com
-    # Optional blind carbon copy recipients:
-        #bcc: r2d2@example.com,hansolo@example.com
-    # Optional recipient of the email response:
-        #reply_to: luke@example.com
-    # Optional Message ID this message is replying to:
-        #in_reply_to: <random-luke@example.com>
-    # Optional unsigned/invalid certificates allowance:
-        #ignore_cert: true
-    # Optional converting Markdown to HTML (set content_type to text/html too):
-        convert_markdown: true
-    # Optional attachments:
-        #attachments: attachments.zip,git.diff,./dist/static/*.js,/home/runner/work/GithubActionsCodeQL/results/csharp.sarif
-
-    # Optional priority: 'high', 'normal' (default) or 'low'
-        priority: low
-    
-   
+        subject: mail title.
+        body: your messages.
+      # Optional content type (defaults to text/plain)
+        contentType: text/plain
+      # Optional attachment files (JSON type. require property 'path')
+        attachments: '[{"path":"codeql/csharp.sarif"}]'
+        
