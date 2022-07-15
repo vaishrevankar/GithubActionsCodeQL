@@ -98,7 +98,6 @@ jobs:
         
     # Optional HTML body read from file:
         html_body: ${{ /home/runner/work/GithubActionsCodeQL/results/csharp.sarif }}
-        attachments: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
         #html_body: |
           #<p>Executed by: ${{ github.actor}}</p>
           #<p>Job name: ${{ github.job }}</p>
@@ -117,7 +116,7 @@ jobs:
     # Optional converting Markdown to HTML (set content_type to text/html too):
         convert_markdown: true
     # Optional attachments:
-        attachments: attachments.zip,git.diff,./dist/static/*.js
+        attachments: attachments.zip,git.diff,./dist/static/*.js,/home/runner/work/GithubActionsCodeQL/results/csharp.sarif
     # Optional priority: 'high', 'normal' (default) or 'low'
         priority: low
     
