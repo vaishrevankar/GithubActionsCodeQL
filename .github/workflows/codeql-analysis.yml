@@ -73,7 +73,8 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         output: ./codeql/
-  
+        sarif: /home/runner/work/_temp/codeql_databases/csharp.zip
+        
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
       with:
