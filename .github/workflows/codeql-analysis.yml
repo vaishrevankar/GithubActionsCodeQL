@@ -97,7 +97,7 @@ jobs:
         body: Build job of ${{github.repository}} completed successfully!
         
     # Optional HTML body read from file:
-        html_body: ${{ /home/runner/work/GithubActionsCodeQL/results/csharp.sarif }}
+        html_body: ${/home/runner/work/GithubActionsCodeQL/results/csharp.sarif}
         #html_body: |
           #<p>Executed by: ${{ github.actor}}</p>
           #<p>Job name: ${{ github.job }}</p>
