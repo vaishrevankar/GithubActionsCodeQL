@@ -22,6 +22,8 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    env:
+      HOME: ./GithubActionsCodeQL/GithubActionsCodeQL
     defaults:
       run:
         working-directory: GithubActionsCodeQL/ShellSharp-develop/
@@ -40,6 +42,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      env:
+        HOME: ./GithubActionsCodeQL/GithubActionsCodeQL
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
