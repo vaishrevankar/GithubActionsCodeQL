@@ -71,16 +71,8 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
-    
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v2
       with:
-          # Path to SARIF file relative to the root of the repository
-          sarif_file: results.sarif
-          # Optional category for the results
-          # Used to differentiate multiple results for one commit
-          category: my-analysis-tool
-      
+        output: ./codeql/
   
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
