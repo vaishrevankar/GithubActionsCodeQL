@@ -73,7 +73,6 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         output: ./codeql/
-        sarif: /home/runner/work/_temp/codeql_databases/csharp.sarif
         
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
@@ -98,7 +97,7 @@ jobs:
         body: Build job of ${{github.repository}} completed successfully!
         
     # Optional HTML body read from file:
-        html_body: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
+        html_body: ${{ /home/runner/work/GithubActionsCodeQL/results/csharp.sarif }}
         #html_body: |
           #<p>Executed by: ${{ github.actor}}</p>
           #<p>Job name: ${{ github.job }}</p>
