@@ -98,7 +98,7 @@ jobs:
         
     # Optional HTML body read from file:
         html_body: ${{ /home/runner/work/GithubActionsCodeQL/results/csharp.sarif }}
-        attach_file: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
+        attachments: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
         #html_body: |
           #<p>Executed by: ${{ github.actor}}</p>
           #<p>Job name: ${{ github.job }}</p>
