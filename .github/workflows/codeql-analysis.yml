@@ -80,21 +80,22 @@ jobs:
         name: assets-for-download
         path: codeql/csharp.sarif
         
-    - name: Send email
+    - name: Send mail
       uses: dawidd6/action-send-mail@v3
       with:
-        host: smtp.gmail.com
-      # Optional port (defaults to 465)
-        port: 465
+        server_address: smtp.gmail.com
+        server_port: 465
         username: ${{secrets.MAIL_USERNAME}}
         password: ${{secrets.MAIL_PASSWORD}}
-        sender: vaish revankar
-        from: vaish revankar
+        subject: Github Actions job result
         to: vaishnavirevankar@gmail.com
-        subject: mail title.
-        body: your messages.
-      # Optional content type (defaults to text/plain)
-        contentType: text/plain
-      # Optional attachment files (JSON type. require property 'path')
+        from: vaish revankar # <user@example.com>
+        secure: true
+        body: Build job of ${{github.repository}} completed successfully!
+        #attachments: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
+        html_body: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
+        #ignore_cert: true
+        convert_markdown: true
         attachments: '[{"path":"codeql/csharp.sarif"}]'
+	      #priority: low
         
