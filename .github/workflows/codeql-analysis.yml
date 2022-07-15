@@ -78,7 +78,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with: 
         name: assets-for-download
-        path: /home/runner/work/_temp/codeql_databases/csharp.sarif
+        path: codeql/csharp.sarif
         
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
