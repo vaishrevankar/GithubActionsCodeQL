@@ -81,7 +81,7 @@ jobs:
         path: codeql/csharp.sarif
         
     - name: Send email
-      uses: devellany/send-mailer@v1.0.2
+      uses: dawidd6/action-send-mail@v3
       with:
         host: smtp.gmail.com
       # Optional port (defaults to 465)
