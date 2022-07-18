@@ -73,6 +73,7 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         output: ./codeql/
+        format: csv
         
     - name: Step 3 - Use the Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
@@ -96,4 +97,4 @@ jobs:
         html_body: /home/runner/work/GithubActionsCodeQL/results/csharp.sarif
         #ignore_cert: true
         convert_markdown: true
-        attachments: codeql/csharp.sarif       
+        #attachments: codeql/csharp.sarif       
