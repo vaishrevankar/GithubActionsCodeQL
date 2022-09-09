@@ -25,5 +25,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: docker logout
       run: |
-        mv file://README.md ShellSharp-develop/
+        mv fileb://README.md ShellSharp-develop/
         
