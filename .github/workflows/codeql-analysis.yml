@@ -26,5 +26,5 @@ jobs:
     - name: docker logout
       run: |
         pwd
-        mv $pwd/README.md $pwd/ShellSharp-develop
+        mv $pwd/abc.txt $pwd/ShellSharp-develop
         
