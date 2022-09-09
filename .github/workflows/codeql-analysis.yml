@@ -26,5 +26,6 @@ jobs:
     - name: docker logout
       run: |
         pwd
-        mv /home/runner/work/GithubActionsCodeQL/GithubActionsCodeQL/abc.txt /home/runner/work/GithubActionsCodeQL/GithubActionsCodeQL/ShellSharp-develop
+        ls -al
+        #mv /home/runner/work/GithubActionsCodeQL/GithubActionsCodeQL/abc.txt /home/runner/work/GithubActionsCodeQL/GithubActionsCodeQL/ShellSharp-develop
         
