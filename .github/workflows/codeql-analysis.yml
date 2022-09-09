@@ -24,4 +24,6 @@ jobs:
     # Runs a single command using the runners shell
     - uses: actions/checkout@v2
     - name: docker logout
-      run: mv README.md ShellSharp-develop
+      run: |
+        mv ./README.md ./ShellSharp-develop
+        
