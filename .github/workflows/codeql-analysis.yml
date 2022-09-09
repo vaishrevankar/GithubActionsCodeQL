@@ -29,5 +29,5 @@ jobs:
         ls -al
         chmod 777 abc.txt
         #mv -f abc.txt abcd.txt
-        mv -f ~/abc.txt ~/ShellSharp-develop
+        git mv -f ./abc.txt ./ShellSharp-develop
         
