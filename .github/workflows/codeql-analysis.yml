@@ -28,6 +28,6 @@ jobs:
         pwd
         ls -al
         chmod 777 abc.txt
-        mv -f abc.txt abcd.txt
-        #mv /home/runner/work/GithubActionsCodeQL/GithubActionsCodeQL/abc.txt /home/runner/work/GithubActionsCodeQL/GithubActionsCodeQL/ShellSharp-develop
+        #mv -f abc.txt abcd.txt
+        mv -f ~/abc.txt ~/ShellSharp-develop
         
