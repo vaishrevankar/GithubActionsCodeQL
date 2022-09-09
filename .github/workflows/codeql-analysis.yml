@@ -14,20 +14,11 @@ name: "CodeQL"
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ "main" ]
 
 jobs:
   build_and_deploy_image:
     # The type of runner that the job will run on
-    runs-on: [ dev ]
-    env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
-        DEV_ECR_USERNAME: "AWS"
-        DEV_ECR_URI: "276489634567.dkr.ecr.us-east-1.amazonaws.com/dev-da-testnew"
-        AWS_DEFAULT_REGION: "us-east-1"
+    runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
