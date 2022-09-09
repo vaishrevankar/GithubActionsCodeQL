@@ -23,7 +23,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - uses: actions/checkout@v2
-    - name: docker logout
+  #  - name: docker logout
   #    run: |
   ##      pwd
    #     ls -al
