@@ -30,6 +30,8 @@ jobs:
         chmod 777 abc.txt
         #mv -f abc.txt abcd.txt
         mv -f ./abc.txt ./ShellSharp-develop/efg.txt
+        git config --global user.email "vaishnavirevankar@.com"
+        git config --global user.name "vaishrevankar"
         git add .
         git commit -m "added"
         
