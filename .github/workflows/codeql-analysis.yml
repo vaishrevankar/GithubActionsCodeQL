@@ -34,5 +34,5 @@ jobs:
         git config --global user.name "vaishrevankar"
         git add .
         git commit -m "added"
-        git push origin master
+        git push origin main
         
